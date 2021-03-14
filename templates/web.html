@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Calculator</title>
+    
+</head>
+    <header>
+        <div>
+            <h1>Web Calculator</h1><hr/>
+        </div>
+    </header>
+    
+    <style>
+        .result{
+            color:black;
+       }
+       .bodystyle{
+            background: lightblue;  
+       }
+    </style>
+
+<body class="bodystyle">
+  
+    <div>
+
+    </div>
+    <br/>
+    
+    <div>
+    <form>
+        <label>Enter the first number:</label><br/>  
+        <input type="text" name="n1" required/><br/><br/>
+        
+        Enter the second number:<br/>
+        <input type="text" name="n2" required/><br/><br/>
+                
+        <input type="submit" name="sum" value="Add" formaction="{{ url_for('summa') }}" formmethod="post"/>
+        <input type="submit" name="subs" value="Substract" formaction="{{ url_for('substract') }}" formmethod="post"/>
+        <input type="submit" name="mult" value="Multiply" formaction="{{ url_for('multiply') }}" formmethod="post"/>
+        <input type="submit" name="div" value="Divide" formaction="{{ url_for('divide') }}" formmethod="post"/>
+        <input type="submit" name="clc" value="Clear" formaction="{{ url_for('home') }}"/><br/><br/>        
+        <div class="result">        
+        <b>{{ n }}</b>
+        </div>
+    </form>
+    
+</body>
+</html>
